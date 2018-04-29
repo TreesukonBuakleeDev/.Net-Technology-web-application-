@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #034E85;
+}
+
+#main #middle #middle2 #middle3 table tr th {
+	 color: #FBFBF5;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+h1 {
+    padding: 30px 0 0 45px;
+    font-size: 2em;
+    letter-spacing: 2px;
+    color: White;
+}
+
+h1 a {
+    color: White;
+    text-decoration: none;
+}
+
+h2 {
+    position: relative;
+    top: -3px;
+    font-size: 1em;
+    padding-left: 45px;
+    color: White;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #5F5F5F;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: Black;
+}
+
+p {
+	padding: 10px 0;
+	line-height: 1.7em;
+	text-align: justify;
+	color: #333;
+	font-size: 14px;
+}
+
+a {
+    color: #FF3300;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.border{
+    padding: 4px;
+    border: 1px solid #DADADA;
+}
+
+#main {
+    position: relative;
+    margin: 0 auto;
+    width: 930px;
+    text-align: left;
+    color: #034E85;
+}
+
+#header {
+    height: 134px;
+    background: #034E85 url(images/header.jpg) no-repeat;
+	border:none;
+}
+
+#middle {
+    background: #FBFBF5 url(images/middle.gif) repeat-y;
+}
+
+#middle2 {
+    height: 1%;
+    background: url(images/middle2_blue.jpg) no-repeat bottom;
+}
+
+#middle3 {
+	height: 1%;
+	padding: 40px 45px 0 45px;
+	background: url(images/middle3_blue.jpg) no-repeat top;
+	font-weight: bold;
+}
+
+.box {
+    margin: 10px 0 30px 0;
+}
+
+.firsth4 {
+    padding-top: 20px;
+}
+
+.imgright {
+    float: right;
+    margin: 0 0 5px 20px;
+}
+
+#right ul {
+    padding: 10px 0 10px 40px;
+}
+
+#right ul li {
+    padding: 0;
+    line-height: 1.7em;
+    text-align: justify;
+}
+
+.clearing {
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
+
+#footer {
+}
+
+#footer p {
+    padding-bottom: 20px;
+    text-align: center;
+    color: White;
+}
+
+#footer  a {
+    color: #Ff9900;
+}
+
+.red_star {
+	color:#F00
+}
+
+.text_menu {
+	color: White;
+	font-size:12px;
+    text-decoration: none;
+	text-align:center
+}

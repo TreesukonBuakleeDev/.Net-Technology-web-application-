@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="invoice.CrystalReport_Invoice" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>CrystalReport_Invoice.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.CachedCrystalReport_Invoice" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CrystalReport_Invoice.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="invoice.CrystalReport_Product" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>CrystalReport_Product.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.CachedCrystalReport_Product" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CrystalReport_Product.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="invoice.CrystalReport1" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAJAAAQAAAAAAAIAAAAAAAAAAAACAABAAAABAA=</HashCode>
+      <FileName>CrystalReport1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.CachedCrystalReport1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAFAEAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CrystalReport1.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="invoice.DatasetReport">
+    <Position X="10" Y="0.75" Width="3.25" />
+    <NestedTypes>
+      <Delegate Name="invoice.DatasetReport.FillingGasRowChangeEventHandler" Collapsed="true">
+        <TypeIdentifier />
+      </Delegate>
+      <Class Name="invoice.DatasetReport.FillingGasDataTable" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="invoice.DatasetReport.FillingGasRow" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+      <Class Name="invoice.DatasetReport.FillingGasRowChangeEvent" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJEJAAAQAAAAAgCQBgAEAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.ES" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAgAIAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ES.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.Fill" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HLEB0QA9BeAAJSogCsCIAeYiglCYZhgBRZGjRAIGSYQ=</HashCode>
+      <FileName>Fill.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.frmCrystalReport" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>frmCrystalReport.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.frmCrystalReport_Product" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>frmCrystalReport_Product.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.invoice1" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>PNEj0AK5BGBATSigKsKIBYSkQhKYIBkgwZAKRAKSCYQ=</HashCode>
+      <FileName>invoice1.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.listofvalue" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIIQBADABQAACCAAAAAAQADAKAgAAAgYVEAAAIACAI=</HashCode>
+      <FileName>listofvalue.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.index" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LKEE0AI5BWBAASAkGsCIBQQuglK4YBlCYZGCxIISicQ=</HashCode>
+      <FileName>Order.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.product" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DgAAiAA5AGAAAgIgAAAAAQRgExLIABkAUZICAAICCcQ=</HashCode>
+      <FileName>product.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.Report" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Report.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.My.MyApplication" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>My Project\MyExtensions\MyWebExtension.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.My.MySettings" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Module Name="invoice.My.MyWebExtension" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAAABBAAEgAEAAAAAAAAAgBgBAAAAgAAAAAAAA=</HashCode>
+      <FileName>My Project\MyExtensions\MyWebExtension.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="invoice.My.MySettingsProperty" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="invoice.My.Resources.Resources" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

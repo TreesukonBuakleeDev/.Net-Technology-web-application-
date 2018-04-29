@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatasetReport" targetNamespace="http://tempuri.org/DatasetReport.xsd" xmlns:mstns="http://tempuri.org/DatasetReport.xsd" xmlns="http://tempuri.org/DatasetReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatasetReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatasetReport" msprop:Generator_UserDSName="DatasetReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FillingGas" msprop:Generator_TableClassName="FillingGasDataTable" msprop:Generator_TableVarName="tableFillingGas" msprop:Generator_TablePropName="FillingGas" msprop:Generator_RowDeletingName="FillingGasRowDeleting" msprop:Generator_RowChangingName="FillingGasRowChanging" msprop:Generator_RowEvHandlerName="FillingGasRowChangeEventHandler" msprop:Generator_RowDeletedName="FillingGasRowDeleted" msprop:Generator_UserTableName="FillingGas" msprop:Generator_RowChangedName="FillingGasRowChanged" msprop:Generator_RowEvArgName="FillingGasRowChangeEvent" msprop:Generator_RowClassName="FillingGasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FillingGasNo" msprop:Generator_ColumnVarNameInTable="columnFillingGasNo" msprop:Generator_ColumnPropNameInRow="FillingGasNo" msprop:Generator_ColumnPropNameInTable="FillingGasNoColumn" msprop:Generator_UserColumnName="FillingGasNo" type="xs:string" minOccurs="0" />
+              <xs:element name="FillingGasDate" msprop:Generator_ColumnVarNameInTable="columnFillingGasDate" msprop:Generator_ColumnPropNameInRow="FillingGasDate" msprop:Generator_ColumnPropNameInTable="FillingGasDateColumn" msprop:Generator_UserColumnName="FillingGasDate" type="xs:string" minOccurs="0" />
+              <xs:element name="TruckID" msprop:Generator_ColumnVarNameInTable="columnTruckID" msprop:Generator_ColumnPropNameInRow="TruckID" msprop:Generator_ColumnPropNameInTable="TruckIDColumn" msprop:Generator_UserColumnName="TruckID" type="xs:string" minOccurs="0" />
+              <xs:element name="TruckLicense" msprop:Generator_ColumnVarNameInTable="columnTruckLicense" msprop:Generator_ColumnPropNameInRow="TruckLicense" msprop:Generator_ColumnPropNameInTable="TruckLicenseColumn" msprop:Generator_UserColumnName="TruckLicense" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverID" msprop:Generator_ColumnVarNameInTable="columnDriverID" msprop:Generator_ColumnPropNameInRow="DriverID" msprop:Generator_ColumnPropNameInTable="DriverIDColumn" msprop:Generator_UserColumnName="DriverID" type="xs:string" minOccurs="0" />
+              <xs:element name="DriverName" msprop:Generator_ColumnVarNameInTable="columnDriverName" msprop:Generator_ColumnPropNameInRow="DriverName" msprop:Generator_ColumnPropNameInTable="DriverNameColumn" msprop:Generator_UserColumnName="DriverName" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalFill" msprop:Generator_ColumnVarNameInTable="columnTotalFill" msprop:Generator_ColumnPropNameInRow="TotalFill" msprop:Generator_ColumnPropNameInTable="TotalFillColumn" msprop:Generator_UserColumnName="TotalFill" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

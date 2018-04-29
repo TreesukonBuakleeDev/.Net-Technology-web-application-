@@ -1,0 +1,56 @@
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\bin\invoice.dll
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\bin\invoice.pdb
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\bin\invoice.xml
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\obj\Debug\invoice.Resources.resources
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\obj\Debug\invoice.dll
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\obj\Debug\invoice.xml
+C:\Users\GLUAY\Dropbox\invoice\invoice\invoice\obj\Debug\invoice.pdb
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\bin\invoice.dll
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\bin\invoice.pdb
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\bin\invoice.xml
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\obj\Debug\invoice.Resources.resources
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\obj\Debug\invoice.dll
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\obj\Debug\invoice.xml
+C:\Users\GLUAY\Dropbox\back up invoice\invoice\invoice\invoice\obj\Debug\invoice.pdb
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.dll.config
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.dll
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.pdb
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.xml
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbprojResolveAssemblyReference.cache
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.Resources.resources
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbproj.GenerateResource.Cache
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.dll
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.xml
+C:\Users\Supasan\Desktop\DB_2013\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.pdb
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.dll.config
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.dll
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.pdb
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.xml
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbprojResolveAssemblyReference.cache
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.Resources.resources
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbproj.GenerateResource.Cache
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.dll
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.xml
+C:\Users\AUTO\Desktop\Lab8AE\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.pdb
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.dll.config
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.dll
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.pdb
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\bin\invoice.xml
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.Resources.resources
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbproj.GenerateResource.Cache
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.dll
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.xml
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.pdb
+C:\Users\AUTO\Desktop\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbprojResolveAssemblyReference.cache
+E:\27082015\kmutt\Semester1\INC483\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbprojResolveAssemblyReference.cache
+E:\27082015\kmutt\Semester1\INC483\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.Resources.resources
+E:\27082015\kmutt\Semester1\INC483\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.vbproj.GenerateResource.Cache
+E:\27082015\kmutt\Semester1\INC483\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.dll
+E:\27082015\kmutt\Semester1\INC483\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.xml
+E:\27082015\kmutt\Semester1\INC483\Project3subHeadAndLineItem\invoice_aspnet\invoice_aspnet\webroot\invoice\obj\Debug\invoice.pdb

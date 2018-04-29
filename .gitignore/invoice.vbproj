@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{44D77B87-99B5-4E96-B152-ECC819B78A9A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>invoice</RootNamespace>
+    <AssemblyName>invoice</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>invoice.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>invoice.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\style.css" />
+    <Content Include="ES.aspx" />
+    <Content Include="Fill.aspx" />
+    <Content Include="frmCrystalReport.aspx" />
+    <Content Include="frmCrystalReport_Product.aspx" />
+    <Content Include="image\btnClose.png" />
+    <Content Include="image\btnCopy.png" />
+    <Content Include="image\btnDelete.png" />
+    <Content Include="image\btnEdit.png" />
+    <Content Include="image\btnNew.png" />
+    <Content Include="image\btnPrint.png" />
+    <Content Include="image\btnSave.png" />
+    <Content Include="image\btnSearch.png" />
+    <Content Include="image\EN.png" />
+    <Content Include="image\lineAccept.png" />
+    <Content Include="image\lineAdd.png" />
+    <Content Include="image\lineDelete.png" />
+    <Content Include="image\lineEdit.gif" />
+    <Content Include="image\lineSelect.gif" />
+    <Content Include="image\lineSelect.png" />
+    <Content Include="image\sub_black_delete.png" />
+    <Content Include="image\TH.png" />
+    <Content Include="invoice1.aspx" />
+    <Content Include="Order.aspx" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\jquery-ui-1.9.1.custom.css" />
+    <Content Include="jquery-ui-1.9.1.custom\css\redmond\jquery-ui-1.9.1.custom.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\AUTHORS.txt" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\alt-field.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\animation.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\buttonbar.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\date-formats.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\date-range.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\default.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\dropdown-month-year.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\icon-trigger.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\images\calendar.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\index.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\inline.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\localization.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\min-max.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\multiple-calendars.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\other-months.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\datepicker\show-week.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\demos.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\images\calendar.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-config-on-tile.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-config-on.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-spindown-closed.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\images\demo-spindown-open.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\images\icon-docs-info.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\demos\images\pbar-ani.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\docs\datepicker.html" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\globalize.culture.de-DE.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\globalize.culture.ja-JP.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\globalize.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\jquery.bgiframe-2.1.2.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\jquery.cookie.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\jquery.metadata.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\jquery.mousewheel.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\jshint.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\qunit.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\external\qunit.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\grunt.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\jquery-1.8.2.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\MIT-LICENSE.txt" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery-ui.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.all.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.base.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.core.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\jquery.ui.theme.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\jquery-ui.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\jquery.ui.all.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\jquery.ui.base.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\jquery.ui.core.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\jquery.ui.datepicker.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\jquery.ui.theme.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\jquery-ui.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\jquery.ui.core.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\themes\redmond\minified\jquery.ui.theme.min.css" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery-ui-i18n.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ka.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\jquery-ui.custom.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.core.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\jquery.ui.datepicker.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery-ui-i18n.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-af.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-az.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bg.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bs.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ca.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cs.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-da.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-de.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-el.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eo.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-es.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-et.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eu.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fa.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fi.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fo.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-gl.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-he.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hi.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hr.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hu.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hy.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-id.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-is.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-it.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ja.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ka.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-kk.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-km.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ko.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lb.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lt.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lv.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-mk.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ml.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ms.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-no.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pl.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-rm.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ro.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ru.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sk.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sl.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sq.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sv.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ta.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-th.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tj.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tr.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-uk.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-vi.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\development-bundle\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\index.html" />
+    <Content Include="jquery-ui-1.9.1.custom\js\jquery-1.8.2.js" />
+    <Content Include="jquery-ui-1.9.1.custom\js\jquery-ui-1.9.1.custom.js" />
+    <Content Include="jquery-ui-1.9.1.custom\js\jquery-ui-1.9.1.custom.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\jquery.tablesorter.pager.css" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\jquery.tablesorter.pager.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build.xml" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build\js.jar" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build\jsmin.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build\min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build\pack.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build\packer.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build\ParseMaster.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\build\writeFile.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\ajax-content.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\jq.css" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-ajax.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-empty-table.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-extending-defaults.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-meta-headers.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-meta-parsers.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-meta-sort-list.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-option-debug.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-option-digits.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-option-sort-force.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-option-sort-key.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-option-sort-list.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-option-sort-order.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-option-text-extraction.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-options-headers.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-pager.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-parsers.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-trigger-sort.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-triggers.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-update-cell.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\example-widgets.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\external.png" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\index.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\docs.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\examples.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\jquery-latest.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\jquery.metadata.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\jquery.tablesorter.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\jquery.tablesorter.min.js" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\ajax-content.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\cell.metadata.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\checkbox.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\colspan.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\demo.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\index.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\large.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\lockedOrder.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\metadata.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\multiple-headers.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\tests\pager.html" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\asc.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\bg.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\desc.gif" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\style.css" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\asc.png" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\bg.png" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\desc.png" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\style.css" />
+    <Content Include="listofvalue.aspx" />
+    <Content Include="product.aspx" />
+    <Content Include="Report.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport_Invoice.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_Invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport_Product.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport_Product.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatasetReport.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ES.aspx.designer.vb">
+      <DependentUpon>ES.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ES.aspx.vb">
+      <DependentUpon>ES.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fill.aspx.designer.vb">
+      <DependentUpon>Fill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fill.aspx.vb">
+      <DependentUpon>Fill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCrystalReport.aspx.designer.vb">
+      <DependentUpon>frmCrystalReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalReport.aspx.vb">
+      <DependentUpon>frmCrystalReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmCrystalReport_Product.aspx.designer.vb">
+      <DependentUpon>frmCrystalReport_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalReport_Product.aspx.vb">
+      <DependentUpon>frmCrystalReport_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invoice1.aspx.designer.vb">
+      <DependentUpon>invoice1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="invoice1.aspx.vb">
+      <DependentUpon>invoice1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Order.aspx.designer.vb">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.aspx.vb">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="listofvalue.aspx.designer.vb">
+      <DependentUpon>listofvalue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="listofvalue.aspx.vb">
+      <DependentUpon>listofvalue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="product.aspx.designer.vb">
+      <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product.aspx.vb">
+      <DependentUpon>product.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.designer.vb">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.aspx.vb">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_Invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Invoice.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport_Product.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport_Product.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram2.cd" />
+    <None Include="DatasetReport.xsc">
+      <DependentUpon>DatasetReport.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetReport.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DatasetReport.xss">
+      <DependentUpon>DatasetReport.xsd</DependentUpon>
+    </None>
+    <None Include="jquery-ui-1.9.1.custom\development-bundle\package.json" />
+    <None Include="jquery-ui-1.9.1.custom\development-bundle\README.md" />
+    <None Include="jquery-ui-1.9.1.custom\development-bundle\ui.core.jquery.json" />
+    <None Include="jquery-ui-1.9.1.custom\development-bundle\ui.datepicker.jquery.json" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\prop-base\jquery.tablesorter.pager.css.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\prop-base\jquery.tablesorter.pager.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\text-base\jquery.tablesorter.pager.css.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\text-base\jquery.tablesorter.pager.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\prop-base\js.jar.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\prop-base\jsmin.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\prop-base\min.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\prop-base\pack.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\prop-base\packer.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\prop-base\ParseMaster.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\prop-base\writeFile.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\text-base\js.jar.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\text-base\jsmin.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\text-base\min.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\text-base\pack.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\text-base\packer.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\text-base\ParseMaster.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\text-base\writeFile.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\changelog" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-ajax.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-empty-table.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-extending-defaults.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-meta-headers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-meta-parsers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-meta-sort-list.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-option-debug.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-option-digits.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-option-sort-force.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-option-sort-key.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-option-sort-list.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-option-sort-order.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-option-text-extraction.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-options-headers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-pager.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-parsers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-trigger-sort.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-triggers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-update-cell.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\example-widgets.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\prop-base\index.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-ajax.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-empty-table.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-extending-defaults.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-meta-headers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-meta-parsers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-meta-sort-list.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-option-debug.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-option-digits.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-option-sort-force.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-option-sort-key.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-option-sort-list.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-option-sort-order.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-option-text-extraction.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-options-headers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-pager.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-parsers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-trigger-sort.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-triggers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-update-cell.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\example-widgets.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\text-base\index.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\.tmp_index.html.55071~" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\prop-base\ajax-content.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\text-base\ajax-content.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\prop-base\jq.css.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\text-base\jq.css.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\prop-base\external.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\text-base\external.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\prop-base\docs.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\prop-base\examples.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\text-base\docs.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\text-base\examples.js.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\cell.metadata.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\checkbox.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\colspan.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\demo.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\index.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\large.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\lockedOrder.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\metadata.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\multiple-headers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\prop-base\pager.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\cell.metadata.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\checkbox.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\colspan.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\demo.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\index.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\large.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\lockedOrder.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\metadata.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\multiple-headers.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\text-base\pager.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\prop-base\ajax-content.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\text-base\ajax-content.html.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\prop-base\asc.gif.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\prop-base\bg.gif.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\prop-base\blue.zip.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\prop-base\desc.gif.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\prop-base\style.css.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\text-base\asc.gif.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\text-base\bg.gif.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\text-base\blue.zip.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\text-base\desc.gif.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\text-base\style.css.svn-base" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\blue.zip" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\all-wcprops" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\entries" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\prop-base\asc.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\prop-base\bg.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\prop-base\desc.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\prop-base\green.zip.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\prop-base\style.css.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\text-base\asc.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\text-base\bg.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\text-base\desc.png.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\text-base\green.zip.svn-base" />
+    <None Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\text-base\style.css.svn-base" />
+    <Content Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\green.zip" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\addons\pager\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\build\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\assets\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\css\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\img\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\docs\js\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\tests\assets\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\blue\.svn\tmp\text-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\tmp\prop-base\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\tmp\props\" />
+    <Folder Include="jquery-ui-1.9.1.custom\tablesorter\themes\green\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>28147</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

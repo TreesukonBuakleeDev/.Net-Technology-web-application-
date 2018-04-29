@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="invoice.Fill">
+    <Position X="9.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>HLEB0QA9BeAAJSogCsCIAeYiglCYZhgBRZGjRAIGSYQ=</HashCode>
+      <FileName>Fill.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.invoice1">
+    <Position X="5.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>PNEj0AK5BGBATSigKsKIBYSkQhKYIBkgwZAKRAKSCYQ=</HashCode>
+      <FileName>invoice1.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.listofvalue">
+    <Position X="13.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>BAIIQBADABQAACCAAAAAAQADAKAgAAAgYVEAAAIACAI=</HashCode>
+      <FileName>listofvalue.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="invoice.index">
+    <Position X="1.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>LKEE0AI5BWBAASAkGsCIBQQuglK4YBlCYZGCxIISicQ=</HashCode>
+      <FileName>Order.aspx.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
